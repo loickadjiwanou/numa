@@ -101,9 +101,10 @@ fi
 echo -e "\n${BOLD}[+] Premier lancement (démarrage NumaService)${RESET}"
 adb -s "$DEVICE" shell am start -n "${PACKAGE}/.MainActivity" &>/dev/null || true
 sleep 2
-# Retour à l'écran d'accueil (touche Home) — l'app disparaît, NumaService continue
+# Retour à l'écran d'accueil — l'app ne figure pas dans les récentes
+# grâce à android:excludeFromRecents="true" dans le manifest
 adb -s "$DEVICE" shell input keyevent KEYCODE_HOME
-ok "MainActivity lancée → retour à l'écran d'accueil"
+ok "MainActivity lancée → retour à l'écran d'accueil (invisible dans les récentes)"
 
 # ─── Vérification finale ──────────────────────────────────────────────────────
 echo -e "\n${BOLD}[✓] Vérification des services${RESET}"

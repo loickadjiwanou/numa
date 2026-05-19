@@ -7,8 +7,26 @@ This guide covers every step required to make Numa fully operational after APK i
 ## Before you start
 
 - Numa APK is installed on the device
-- USB debugging is enabled (if using adb commands)
+- USB debugging is enabled on the device
 - Device runs Android 8.0 (API 26) or higher
+
+---
+
+## Automatic setup (recommended)
+
+After installing the APK, connect the device to your PC via USB and run the setup script from the project root:
+
+```bash
+./setup_numa.sh
+```
+
+The script automatically configures all permissions, enables the accessibility service, disables battery optimization, creates the protected folder, and starts Numa.
+
+> If the script cannot enable the accessibility service automatically (system dialog required), a warning will appear — follow **Step 2** below manually.
+
+---
+
+## Manual steps (if the script fails or is unavailable)
 
 ---
 

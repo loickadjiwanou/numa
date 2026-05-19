@@ -7,8 +7,26 @@ Ce guide décrit toutes les étapes pour rendre Numa pleinement opérationnel ap
 ## Prérequis avant de commencer
 
 - L'APK Numa est installé sur l'appareil
-- Le débogage USB est activé (si vous utilisez les commandes adb)
+- Le débogage USB est activé sur l'appareil
 - L'appareil tourne sous Android 8.0 (API 26) minimum
+
+---
+
+## Setup automatique (recommandé)
+
+Après avoir installé l'APK, connectez l'appareil au PC en USB et lancez le script de setup depuis la racine du projet :
+
+```bash
+./setup_numa.sh
+```
+
+Le script configure automatiquement toutes les permissions, active le service d'accessibilité, désactive l'optimisation batterie, crée le dossier protégé et démarre Numa.
+
+> Si le script ne peut pas activer le service d'accessibilité automatiquement (dialog système), un avertissement s'affiche — suivez alors l'**Étape 2** ci-dessous manuellement.
+
+---
+
+## Étapes manuelles (si le script échoue ou n'est pas disponible)
 
 ---
 
