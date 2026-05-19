@@ -130,14 +130,6 @@ override fun getPackages(): List<ReactPackage> =
 npx expo run:android
 ```
 
-### Production APK (EAS)
-
-```bash
-eas login
-eas build:configure
-eas build --platform android --profile production
-```
-
 ### Production APK (local)
 
 ```bash

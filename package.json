@@ -7,8 +7,7 @@
     "start": "expo start",
     "android": "expo run:android",
     "prebuild": "expo prebuild --clean",
-    "build:android": "eas build --platform android --profile production",
-    "ios": "expo run:ios"
+    "build:android": "cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
     "expo": "~54.0.33",

@@ -101,7 +101,9 @@ fi
 echo -e "\n${BOLD}[+] Premier lancement (démarrage NumaService)${RESET}"
 adb -s "$DEVICE" shell am start -n "${PACKAGE}/.MainActivity" &>/dev/null || true
 sleep 2
-ok "MainActivity lancée"
+# Retour à l'écran d'accueil (touche Home) — l'app disparaît, NumaService continue
+adb -s "$DEVICE" shell input keyevent KEYCODE_HOME
+ok "MainActivity lancée → retour à l'écran d'accueil"
 
 # ─── Vérification finale ──────────────────────────────────────────────────────
 echo -e "\n${BOLD}[✓] Vérification des services${RESET}"
