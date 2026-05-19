@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">Numa</string>
+  <string name="accessibility_service_description" translatable="false">Numa background service</string>
+</resources>

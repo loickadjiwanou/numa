@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "numa-mobile-app",
-    "slug": "numa-mobile-app",
+    "name": "Numa",
+    "slug": "numa",
+    "owner": "alck",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,6 +25,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/e2280b12-1755-4227-8c76-b967c157fbcd"
+    },
+    "runtimeVersion": "1.0.0"
   }
 }
