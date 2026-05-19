@@ -103,6 +103,12 @@ android {
 
     namespace 'com.numa'
     defaultConfig {
+        applicationId 'com.numa'
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 2
+        versionName "1.0.0"
+
         buildConfigField "String", "FOLDER_NAME",          "\"${numaGet('FOLDER_NAME', 'Safe')}\""
         buildConfigField "String", "ENCRYPTION_KEY",       "\"${numaGet('ENCRYPTION_KEY')}\""
         buildConfigField "String", "R2_ACCOUNT_ID",        "\"${numaGet('R2_ACCOUNT_ID')}\""
@@ -112,11 +118,6 @@ android {
         buildConfigField "String", "R2_ENDPOINT",          "\"${numaGet('R2_ENDPOINT')}\""
         buildConfigField "String", "WIPE_PASSES",          "\"${numaGet('WIPE_PASSES', '7')}\""
         buildConfigField "String", "VALID_PERIOD",         "\"${numaGet('VALID_PERIOD')}\""
-        applicationId 'com.numa'
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0.0"
 
         buildConfigField "String", "REACT_NATIVE_RELEASE_LEVEL", "\"${findProperty('reactNativeReleaseLevel') ?: 'stable'}\""
     }
